@@ -1,0 +1,27 @@
+@HOST=127.0.0.1:6767
+@USER_ID=1
+@PHONE=7
+@INVITE_CODE=CWWWWC183513
+
+###
+
+GET http://{{ HOST }}/api/invitation/query/user/invite_code/?user_id={{ USER_ID }}
+
+###
+
+GET http://{{ HOST }}/api/invitation/query/user/invited_users/?user_id={{ USER_ID }}
+
+
+###
+
+GET http://{{ HOST }}/api/invitation/add/invited_phone/?phone={{ PHONE }}&invite_code={{ INVITE_CODE }}
+
+
+###
+
+GET http://{{ HOST }}/api/invitation/add/register_invited_user/?user_id={{ USER_ID }}&phone={{ PHONE }}
+
+
+###
+
+GET http://{{ HOST }}/-/ping/

@@ -1,0 +1,147 @@
+openapi: "3.0.1"
+
+info:
+  title: "Invitation Project"
+  version: "1.0.0"
+  contact:
+    name: Tang Hui
+
+servers:
+  - url: "http://ors.test.server:6767/api/invitation"
+    description: "Developer Server API Base"
+
+tags:
+  - name: Query
+  - name: After User Register
+  - name: Invite Page
+  - name: Test
+
+paths:
+
+  /-/ping/:
+    servers:
+      - url: "http://ors.test.server:6767"
+        description: "Alive"
+    get:
+      summary: "test service is live."
+      tags: [Test]
+      responses:
+        200:
+          description: ""
+          content:
+            text/html:
+              example:
+                pong
+
+  /query/user/invite_code/:
+    get:
+      summary: "query user's invite code by user id"
+      tags: [Query]
+      parameters:
+        - $ref: '#/components/parameters/user_id'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserInviteCode'
+
+  /query/user/invited_users/:
+    get:
+      summary: "query user invited users"
+      tags: [Query]
+      parameters:
+        - $ref: '#/components/parameters/user_id'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InviteUsers'
+
+  /add/register_invited_user/:
+    get:
+      summary: "register an new user, query who invite he/she"
+      tags: [After User Register]
+      parameters:
+        - $ref: '#/components/parameters/user_id'
+        - $ref: '#/components/parameters/phone'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RegisterInviteUser'
+
+  /add/invited_phone/:
+    get:
+      summary: "pair phone and invite code"
+      tags: [Invite Page]
+      parameters:
+        - $ref: '#/components/parameters/phone'
+        - $ref: '#/components/parameters/invite_code'
+      responses:
+        200:
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiResponse'
+
+components:
+  parameters:
+    user_id:
+      name: user_id
+      in: query
+      required: true
+      schema:
+        type: string
+    invite_code:
+      name: invite_code
+      in: query
+      required: true
+      schema:
+        type: string
+    phone:
+      name: phone
+      in: query
+      required: true
+      schema:
+        type: string
+  schemas:
+    ApiResponse:
+      type: object
+      properties:
+        ok:
+          type: boolean
+
+    UserInviteCode:
+      type: object
+      properties:
+        user_id:
+          type: string
+        invite_code:
+          type: string
+
+    InviteUsers:
+      type: object
+      properties:
+        count:
+          type: integer
+        users:
+          type: array
+          items:
+            type: string
+
+    RegisterInviteUser:
+      type: object
+      properties:
+        result:
+          type: boolean
+        user_id:
+          type: string
+
+
