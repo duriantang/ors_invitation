@@ -1,0 +1,19 @@
+# {{ ansible_managed }}
+
+[group:project_invitation]
+programs = invitation
+
+[program:invitation]
+directory = {{ projects_dir }}/%(program_name)s/build
+command = {{ projects_dir }}/%(program_name)s/build/%(program_name)s
+
+autorestart = true
+startretries = 999
+user = {{ run_user }}
+killasgroup = true
+stopasgroup = true
+startsecs = 5
+environment = LANG="en_US.UTF-8",PYTHONPATH=".",PATH="{{ ansible_env.HOME }}/.local/bin:%(ENV_PATH)s"
+
+stdout_logfile = /data/supervisor_log/%(program_name)s.log
+redirect_stderr = true
