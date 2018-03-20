@@ -1,4 +1,4 @@
-upstream invitation_api {
+upstream ors_invitation_api {
     {% for server in upstream_servers %}
         server {{ server.ip }}:{{ server.port }};
     {% endfor %}
@@ -13,6 +13,6 @@ server {
 		proxy_redirect off;
 		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Scheme $scheme;
-		proxy_pass http://invitation_api;
+		proxy_pass http://ors_invitation_api;
 	}
 }

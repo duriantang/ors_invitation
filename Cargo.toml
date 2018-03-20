@@ -1,5 +1,5 @@
 [package]
-name = "invitation"
+name = "ors_invitation"
 version = "1.0.0"
 authors = ["Hui Tang <duriantang@gmail.com>"]
 

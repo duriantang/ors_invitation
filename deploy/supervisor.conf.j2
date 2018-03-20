@@ -1,9 +1,9 @@
 # {{ ansible_managed }}
 
-[group:project_invitation]
-programs = invitation
+[group:project_ors_invitation]
+programs = ors_invitation
 
-[program:invitation]
+[program:ors_invitation]
 directory = {{ projects_dir }}/%(program_name)s/build
 command = {{ projects_dir }}/%(program_name)s/build/%(program_name)s
 
