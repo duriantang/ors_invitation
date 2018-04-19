@@ -1,5 +1,11 @@
 # Origin Sport Invitation Service
 
+![license](https://img.shields.io/github/license/duriantang/ors_invitation.svg)
+
+![Travis](https://img.shields.io/travis/duriantang/ors_invitation.svg)
+
+![Github All Releases](https://img.shields.io/github/downloads/duriantang/ors_invitation/total.svg)
+
 Invitation Service used by Origin Sport User Register.
 
 Deploy via `Origin Sport Deploy System` .
