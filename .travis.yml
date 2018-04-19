@@ -3,3 +3,7 @@ rust:
   - stable
 services:
   - redis-server
+
+addon:
+  hosts:
+    - redis
