@@ -1,0 +1,10 @@
+language: rust
+
+rust:
+  - stable
+
+services:
+  - redis-server
+addons:
+  hosts:
+    - redis
