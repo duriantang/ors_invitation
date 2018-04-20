@@ -4,6 +4,7 @@
 ![license](https://img.shields.io/github/license/duriantang/ors_invitation.svg)
 ![Travis](https://img.shields.io/travis/duriantang/ors_invitation.svg)
 ![Libraries.io for GitHub](https://img.shields.io/librariesio/github/duriantang/ors_invitation.svg)
+![Codecov](https://img.shields.io/codecov/c/github/duriantang/ors_invitation.svg)
 
 Invitation Service used by Origin Sport User Register.
 
