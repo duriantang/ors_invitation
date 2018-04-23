@@ -33,6 +33,8 @@ extern crate clap;
 
 extern crate num_cpus;
 
+extern crate nickel_cors;
+
 fn main() {
     dotenv().ok();
     env_logger::init();
@@ -43,7 +45,7 @@ fn main() {
     router = views::urls::make_invitation_urls(router);
 
     server.utilize(views::api::InvitationAPI::default_media_type);
-    server.utilize(views::api::InvitationAPI::enable_cors);
+    server.utilize(nickel_cors::enable_cors);
     server.utilize(router);
 
     let server_ip = env::var("SERVER_IP").unwrap_or("127.0.0.1".to_string());
