@@ -2,7 +2,7 @@ openapi: "3.0.1"
 
 info:
   title: "Invitation Project"
-  version: "1.0.2"
+  version: "1.0.3"
   contact:
     name: Tang Hui
 
