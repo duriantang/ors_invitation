@@ -1,12 +1,29 @@
-# [Origin Sport](https://originsport.io/) Invitation Service
+# [Origin Sport] Invitation Service
 
-[![language](https://img.shields.io/badge/language-rust-blue.svg)](https://www.rust-lang.org)
-[![license](https://img.shields.io/github/license/duriantang/ors_invitation.svg)](https://raw.githubusercontent.com/duriantang/ors_invitation/master/LICENSE)
-[![Travis](https://img.shields.io/travis/duriantang/ors_invitation.svg)](https://travis-ci.org/duriantang/ors_invitation)
-[![Codecov](https://img.shields.io/codecov/c/github/duriantang/ors_invitation.svg)](https://codecov.io/gh/duriantang/ors_invitation)
-[![Libraries.io for GitHub](https://img.shields.io/librariesio/github/duriantang/ors_invitation.svg)](https://libraries.io/github/duriantang/ors_invitation)
+[Origin Sport]: https://originsport.io/ "Origin Sport"
 
-Invitation Service used by [Origin Sport](https://originsport.io/) User Register.
+[language]: https://img.shields.io/badge/language-rust%201.25+-blue.svg
+[language website]: https://www.rust-lang.org/ "The Rust Programming Language"
+
+[license]: https://img.shields.io/github/license/duriantang/ors_invitation.svg
+[MIT]: https://raw.githubusercontent.com/duriantang/ors_invitation/master/LICENSE "MIT"
+
+[ci]: https://img.shields.io/travis/duriantang/ors_invitation.svg
+[travis-ci]: https://travis-ci.org/duriantang/ors_invitation "Travis CI"
+
+[cov]: https://img.shields.io/codecov/c/github/duriantang/ors_invitation.svg
+[codecov]: https://codecov.io/gh/duriantang/ors_invitation "Codecov.io"
+
+[libs]: https://img.shields.io/librariesio/github/duriantang/ors_invitation.svg
+[libraries.io]: https://libraries.io/github/duriantang/ors_invitation "Libraries.io for GitHub"
+
+[![language]][language website]
+[![license]][MIT]
+[![ci]][travis-ci]
+[![cov]][codecov]
+[![libs]][libraries.io]
+
+Invitation Service used by [Origin Sport] User Register.
 
 Deploy via `Origin Sport Deploy System` .
 
