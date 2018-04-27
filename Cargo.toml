@@ -1,6 +1,6 @@
 [package]
 name = "ors_invitation"
-version = "1.0.3"
+version = "1.0.4"
 authors = ["Hui Tang <duriantang@gmail.com>"]
 
 [dependencies]
