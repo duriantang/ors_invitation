@@ -2,9 +2,9 @@ openapi: "3.0.1"
 
 info:
   title: "Invitation Project"
-  version: "1.0.4"
+  version: "1.0.5"
   contact:
-    name: Tang Hui
+    name: Hui Tang
 
 servers:
   - url: "http://ors.test.server:6767/api/invitation"
