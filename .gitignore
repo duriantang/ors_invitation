@@ -4,3 +4,4 @@
 build/*_*.*
 
 .env
+.vscode
