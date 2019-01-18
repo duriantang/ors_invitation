@@ -1,13 +1,13 @@
 [package]
 name = "ors_invitation"
-version = "1.0.8"
+version = "1.0.9"
 authors = ["Hui Tang <duriantang@gmail.com>"]
 
 [dependencies]
 redis = "0.9.1"
 
 serde = "1.0.84"
-serde_json = "1.0.34"
+serde_json = "1.0.36"
 
 log = "0.4.6"
 env_logger = "0.6.0"
@@ -19,5 +19,5 @@ clap = "2.32.0"
 
 num_cpus = "1.9.0"
 
-nickel = "0.10.2"
+nickel = "^0.10"
 nickel_cors = "0.2.3"
