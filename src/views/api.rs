@@ -1,8 +1,6 @@
-extern crate nickel;
+use nickel::{MediaType, MiddlewareResult, QueryString, Request, Response};
 
-use self::nickel::{MiddlewareResult, QueryString, Request, Response, MediaType};
-
-use services::invitation::InvitationService;
+use crate::services::invitation::InvitationService;
 
 extern crate serde_json;
 

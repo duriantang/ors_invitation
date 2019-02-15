@@ -2,7 +2,7 @@ extern crate nickel;
 
 use nickel::{HttpRouter, Nickel, Router};
 
-use views::api::InvitationAPI;
+use crate::views::api::InvitationAPI;
 
 pub fn make_invitation_urls(mut router: Router) -> Router {
     let url_prefix = "/api/invitation";

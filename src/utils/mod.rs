@@ -1,2 +1,2 @@
-pub mod invite_code;
 pub mod config;
+pub mod invite_code;

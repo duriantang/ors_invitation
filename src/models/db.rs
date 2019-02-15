@@ -1,4 +1,3 @@
-extern crate redis;
 use redis::{Commands, ConnectionAddr, ConnectionInfo, PipelineCommands};
 
 const INVITE_CODE_CONTER_KEY: &str = "ORS_INVITATION:conter";
@@ -86,7 +85,8 @@ impl DB {
                 .ignore()
                 .hset(self.invite_code_user_key, invite_code, user_id)
                 .query(&self.con)
-        }).unwrap();
+        })
+        .unwrap();
         true
     }
 

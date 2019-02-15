@@ -1,7 +1,6 @@
-use models::db::DB;
-
-use utils::config::Config;
-use utils::invite_code::InviteCode;
+use crate::models::db::DB;
+use crate::utils::config::Config;
+use crate::utils::invite_code::InviteCode;
 
 use std::env;
 pub struct InvitationService {
