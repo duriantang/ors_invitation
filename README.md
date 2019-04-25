@@ -2,7 +2,7 @@
 
 [Origin Sport]: https://originsport.io/ "Origin Sport"
 
-[language]: https://img.shields.io/badge/language-rust%201.32+-blue.svg
+[language]: https://img.shields.io/badge/language-rust%201.34+-blue.svg
 [language website]: https://www.rust-lang.org/ "The Rust Programming Language"
 
 [license]: https://img.shields.io/github/license/duriantang/ors_invitation.svg
