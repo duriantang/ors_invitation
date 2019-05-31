@@ -37,8 +37,13 @@ impl InvitationService {
         let ok = true;
         return ok;
     }
-    pub fn add_register_invited_user(&self, invite_user_id: &str, invited_phone: &str) -> (bool, String) {
-        let (add_success, exists, missing_code, false_user_id) = (true, false, false, "".to_string());
+    pub fn add_register_invited_user(
+        &self,
+        invite_user_id: &str,
+        invited_phone: &str,
+    ) -> (bool, String) {
+        let (add_success, exists, missing_code, false_user_id) =
+            (true, false, false, "".to_string());
         let client = &self.client;
         let invite_code = client.get_invite_code_by_phone(invited_phone);
         if invite_code.is_empty() {

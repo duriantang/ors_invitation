@@ -57,5 +57,7 @@ fn main() {
     );
     server.options = Options::default().thread_count(Some(workers.parse::<usize>().unwrap_or(8)));
 
-    server.listen(&format!("{}:{}", server_ip, server_port)).unwrap();
+    server
+        .listen(&format!("{}:{}", server_ip, server_port))
+        .unwrap();
 }

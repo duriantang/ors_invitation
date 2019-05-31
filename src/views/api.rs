@@ -7,11 +7,17 @@ extern crate serde_json;
 pub struct InvitationAPI {}
 
 impl InvitationAPI {
-    pub fn default_media_type<'mw>(_req: &mut Request, mut resp: Response<'mw>) -> MiddlewareResult<'mw> {
+    pub fn default_media_type<'mw>(
+        _req: &mut Request,
+        mut resp: Response<'mw>,
+    ) -> MiddlewareResult<'mw> {
         resp.set(MediaType::Json);
         resp.next_middleware()
     }
-    pub fn query_user_invite_code_api<'mw>(req: &mut Request, resp: Response<'mw>) -> MiddlewareResult<'mw> {
+    pub fn query_user_invite_code_api<'mw>(
+        req: &mut Request,
+        resp: Response<'mw>,
+    ) -> MiddlewareResult<'mw> {
         let user_id = match req.query().all("user_id") {
             Some(l) => l[0].to_string(),
             None => "".to_string(),
@@ -36,7 +42,10 @@ impl InvitationAPI {
         return resp.send(data.to_string());
     }
 
-    pub fn query_user_invited_users_api<'mw>(req: &mut Request, resp: Response<'mw>) -> MiddlewareResult<'mw> {
+    pub fn query_user_invited_users_api<'mw>(
+        req: &mut Request,
+        resp: Response<'mw>,
+    ) -> MiddlewareResult<'mw> {
         let user_id = match req.query().all("user_id") {
             Some(l) => l[0].to_string(),
             None => "".to_string(),
@@ -62,7 +71,10 @@ impl InvitationAPI {
         return resp.send(data.to_string());
     }
 
-    pub fn add_user_invited_phone_api<'mw>(req: &mut Request, resp: Response<'mw>) -> MiddlewareResult<'mw> {
+    pub fn add_user_invited_phone_api<'mw>(
+        req: &mut Request,
+        resp: Response<'mw>,
+    ) -> MiddlewareResult<'mw> {
         let phone = match req.query().all("phone") {
             Some(l) => l[0].to_string(),
             None => "".to_string(),
@@ -86,7 +98,10 @@ impl InvitationAPI {
         return resp.send(data.to_string());
     }
 
-    pub fn add_register_invited_user_api<'mw>(req: &mut Request, resp: Response<'mw>) -> MiddlewareResult<'mw> {
+    pub fn add_register_invited_user_api<'mw>(
+        req: &mut Request,
+        resp: Response<'mw>,
+    ) -> MiddlewareResult<'mw> {
         let invite_user_id = match req.query().all("user_id") {
             Some(l) => l[0].to_string(),
             None => "".to_string(),
