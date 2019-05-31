@@ -2,7 +2,7 @@ openapi: "3.0.1"
 
 info:
   title: "Invitation Project"
-  version: "1.0.13"
+  version: "1.0.14"
   contact:
     name: Hui Tang
 
